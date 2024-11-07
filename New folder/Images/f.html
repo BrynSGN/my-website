@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <style>
+    /* Style for the message div */
+    #signupMessage {
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+      display: none; /* Hidden by default */
+    }
+  </style>
+</head>
+<body>
+
+<div id="SignUp">
+  <h2>Sign Up</h2>
+  <form id="signUpForm">
+    <input type="text" id="username" placeholder="Username" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button type="submit">Sign Up</button>
+  </form>
+  
+  <!-- Message div to show after signup -->
+  <div id="signupMessage">Thank you for signing up! 🎉</div>
+</div>
+
+<script>
+  // JavaScript to handle form submission and display the message
+  window.onload = function() {
+    document.getElementById("signUpForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form from submitting
+
+      // Display the message
+      document.getElementById("signupMessage").style.display = "block";
+      console.log("Message displayed"); // Check if this logs in the console
+    });
+  };
+</script>
+
+</body>
+</html>
